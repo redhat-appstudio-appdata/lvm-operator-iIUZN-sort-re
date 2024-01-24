@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: lvm-operator
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: lvm-operator
+    app.kubernetes.io/part-of: lvm-operator
+  name: lvm-operator
+spec:
+  replicas: 1
+  revisionHistoryLimit: 0
+  selector:
+    matchLabels:
+      app.kubernetes.io/instance: lvm-operator
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app.kubernetes.io/instance: lvm-operator
+    spec:
+      containers:
+      - env:
+        - name: GOGC
+          value: "120"
+        - name: GOMAXPROCS
+          value: "2"
+        - name: NAMESPACE
+          value: openshift-storage
+        - name: NAME
+          value: lvms-operator
+        image: image
+        imagePullPolicy: Always
+        name: container-image
+        resources:
+          requests:
+            cpu: 5m
+            memory: 50Mi
+status: {}
