@@ -23,7 +23,7 @@ spec:
         app.kubernetes.io/instance: topolvm
     spec:
       containers:
-      - image: image
+      - image: quay.io/redhat-user-workloads/logical-volume-manag-tenant/lvm-operator/topolvm@sha256:2d7ae153836030bdcc9d5118e487fdb17be05b1b468cfa0e6e32bb73d25844cd
         imagePullPolicy: Always
         name: container-image
         resources:
