@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: topolvm
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: topolvm
+    app.kubernetes.io/part-of: lvm-operator
+  name: topolvm
+spec:
+  replicas: 1
+  revisionHistoryLimit: 0
+  selector:
+    matchLabels:
+      app.kubernetes.io/instance: topolvm
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app.kubernetes.io/instance: topolvm
+    spec:
+      containers:
+      - image: image
+        imagePullPolicy: Always
+        name: container-image
+        resources:
+          requests:
+            cpu: 10m
+            memory: 50Mi
+status: {}
