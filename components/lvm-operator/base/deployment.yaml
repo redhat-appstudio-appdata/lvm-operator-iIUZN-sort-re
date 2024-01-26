@@ -32,7 +32,7 @@ spec:
           value: openshift-storage
         - name: NAME
           value: lvms-operator
-        image: quay.io/redhat-user-workloads/logical-volume-manag-tenant/lvm-operator/lvm-operator@sha256:71d0c783781a83a62619653e9892134d549bf49dee87e3ad5fa9ce40526e771d
+        image: quay.io/redhat-user-workloads/logical-volume-manag-tenant/lvm-operator/lvm-operator@sha256:87d33ce5e76449b50a9bfd033070b3a57c37d36334b4f071d16a19a6f652266c
         imagePullPolicy: Always
         name: container-image
         resources:
