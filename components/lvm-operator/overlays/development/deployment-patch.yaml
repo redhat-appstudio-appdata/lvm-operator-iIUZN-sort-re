@@ -12,7 +12,7 @@ spec:
       creationTimestamp: null
     spec:
       containers:
-      - image: quay.io/redhat-user-workloads/logical-volume-manag-tenant/lvm-operator/lvm-operator@sha256:d2717bc0b8cefe9dd89e1396e233221aa80e71eee47a381299e1ee1884e131a1
+      - image: quay.io/redhat-user-workloads/logical-volume-manag-tenant/lvm-operator/lvm-operator@sha256:6ec8ffc745762d31be6c53fc9a680c0b1c0b8eab28cc96dc9effd69eeb819a88
         name: container-image
         resources: {}
 status: {}
